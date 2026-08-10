@@ -1,5 +1,17 @@
 name: workflow_01
 # To get a trigger on every push in this repo in any branch
 on: push
+jobs:
+  job1:
+    name: JOB1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running single command in Job1
+        run: echo "This is my github workflow"
+      - name: Cheking OS release for Github Hosted Runner
+        run: cat /etc/os-release
+      
+    
+
 
 
