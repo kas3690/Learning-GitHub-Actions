@@ -40,7 +40,7 @@ jobs:
       - name: Upload from multiple paths with exclusions
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: Multiple_Paths
+          name: Multiple_Paths_With_Exclusions
           path: |
             ./myartifact.txt
             artifacts/
