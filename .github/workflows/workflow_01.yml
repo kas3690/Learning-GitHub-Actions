@@ -21,24 +21,24 @@ jobs:
           echo ls -ltr >> artifacts/list.txt
           echo hostname >> hostname.txt
       - name: Upload single file
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: single_file
           path: ./myartifact.txt
       - name: Upload directory
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: directory_artifacts
           path: artifacts
       - name: Upload from multiple paths
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: Multiple_Paths
           path: |
             ./myartifact.txt
             artifacts/
       - name: Upload from multiple paths with exclusions
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: Multiple_Paths_With_Exclusions
           path: |
