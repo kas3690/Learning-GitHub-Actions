@@ -58,11 +58,29 @@ jobs:
        - name: Download single file artifact
          uses: actions/download-artifact@v8.0.1
          with:
-           name: single_file
+           name: directory_artifacts
        - name: Checking current directory post download
          run: |
            pwd
            ls -ltr
+  job3:
+    name: JOB3
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking current directory
+        run: |
+          pwd
+          ls -ltr
+      -  name: Download directory
+         uses: actions/download-artifact@v8.0.1
+         with:
+           name: single_file
+      - name: Checking current directory post download
+        run: |
+         pwd
+         ls -ltr
+ 
  
     
 
