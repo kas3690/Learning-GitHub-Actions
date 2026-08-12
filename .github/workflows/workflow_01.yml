@@ -29,7 +29,6 @@ jobs:
         with:
           name: single_file
           path: ./myartifact.txt
-          expire_in: never      
   job2:
     name: JOB2
     needs: job1
@@ -46,7 +45,4 @@ jobs:
        - name: Checking current directory post download
          run: |
            pwd
-           ls -ltr
-           ls -ltr single_file
-           echo "CHECKING DIRECTORY ARTIFACTS"
-           ls -ltr download_directory
+           ls -ltr   
