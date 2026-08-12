@@ -47,6 +47,6 @@ jobs:
          run: |
            pwd
            ls -ltr
-              ls -ltr single_file
-             echo "CHECKING DIRECTORY ARTIFACTS"
-             ls -ltr download_directory
+           ls -ltr single_file
+           echo "CHECKING DIRECTORY ARTIFACTS"
+           ls -ltr download_directory
