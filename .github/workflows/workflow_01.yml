@@ -21,24 +21,24 @@ jobs:
           echo ls -ltr >> artifacts/list.txt
           echo hostname >> hostname.txt
       - name: Upload single file
-        uses: actions/upload-artifact@v7.0.0
+        uses: actions/upload-artifact@v5.0.0
         with:
           name: single_file
           path: ./myartifact.txt
       - name: Upload directory
-        uses: actions/upload-artifact@v7.0.0
+        uses: actions/upload-artifact@v5.0.0
         with:
           name: directory_artifacts
           path: artifacts
       - name: Upload from multiple paths
-        uses: actions/upload-artifact@v7.0.0
+        uses: actions/upload-artifact@v5.0.0
         with:
           name: Multiple_Paths
           path: |
             ./myartifact.txt
             artifacts/
       - name: Upload from multiple paths with exclusions
-        uses: actions/upload-artifact@v7.0.0
+        uses: actions/upload-artifact@v5.0.0
         with:
           name: Multiple_Paths_With_Exclusions
           path: |
@@ -54,7 +54,7 @@ jobs:
           pwd
           ls -ltr
        - name: Download single file artifact
-         uses: actions/download-artifact@v7.0.0
+         uses: actions/download-artifact@v5.0.0
          with:
            name: single_file
        - name: Checking current directory post download
