@@ -3,7 +3,7 @@ name: workflow_01
 on: 
   push: 
     branches: 
-    - dev 
+      - dev 
   pull_request:
     branches:
       - main
