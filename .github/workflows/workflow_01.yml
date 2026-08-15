@@ -87,7 +87,7 @@ jobs:
         run: echo "[INFO] Password for ${{ vars.USER }} is ${{secrets.PASSWORD}}."
     environment:
       name: PRODUCTION
-    if: ${{github.ref_name == 'heads/merge'}} 
+    if: ${{github.base_ref == 'main'}} 
 
 
       
