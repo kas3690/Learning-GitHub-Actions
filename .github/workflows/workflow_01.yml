@@ -75,7 +75,7 @@ jobs:
         run: echo "[INFO] Password for ${{ vars.USER }} is ${{secrets.PASSWORD}}."
     environment:
       name: STAGING
-    if: github.ref_name == 'dev' 
+    if: ${{github.ref_name == 'dev'}}
   production:
     name: PRODUCTION DEPLOYMENT
     runs-on: ubuntu-latest
@@ -86,7 +86,9 @@ jobs:
         run: echo "[INFO] Password for ${{ vars.USER }} is ${{secrets.PASSWORD}}."
     environment:
       name: PRODUCTION
-    if: github.ref_name == 'heads/merge' 
+    if: ${{github.ref_name == 'heads/merge'}} 
+
+
       
       
       
