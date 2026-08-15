@@ -62,7 +62,8 @@ jobs:
          run: |
            echo "[INFO] Triggered by ${{ github.event_name}}"
            echo "[INFO] New changes are added by ${{github.actor}} in ref_name ${{github.ref_name}} branch"
-            echo "[INFO] New changes are added by ${{github.actor}} in head_ref ${{github.head_ref}} branch"
+           echo "[INFO] New changes are added by ${{github.actor}} in base_ref ${{github.base_ref}} branch"
+           echo "[INFO] New changes are added by ${{github.actor}} in head_ref ${{github.head_ref}} branch"
            echo "[INFO] Current step is running on ${{runner.os}}"
            echo "[INFO] Current JOB ID is ${{ job.check_run_id }}."
   staging:
