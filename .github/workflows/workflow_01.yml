@@ -50,4 +50,6 @@ jobs:
         with:
           languages: ${{matrix.language}}
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: 'security'
