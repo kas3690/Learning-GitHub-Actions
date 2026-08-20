@@ -43,6 +43,7 @@ jobs:
       matrix: 
         language: [ 'python' ]
     steps:
+      - uses: actions/cache@v5    
       - name: Checkout code
         uses: actions/checkout@v5.1.0
       - name: Initialize CodeQL
