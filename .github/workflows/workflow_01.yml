@@ -10,7 +10,7 @@ on:
 jobs:
   unit-tests:
     name: Running unit tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest    
     steps:
       - name: Checkout code
         uses: actions/checkout@v5.1.0
@@ -34,6 +34,7 @@ jobs:
   codeql:
     name: CodeQL Security Scan
     runs-on: ubuntu-latest
+    - uses: actions/cache@v5    
     permissions:
       actions: read
       contents: read
@@ -43,6 +44,7 @@ jobs:
       matrix: 
         language: [ 'python' ]
     steps:
+      steps:
       - name: Checkout code
         uses: actions/checkout@v5.1.0
       - name: Initialize CodeQL
