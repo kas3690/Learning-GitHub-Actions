@@ -33,8 +33,7 @@ jobs:
           path: reports/
   codeql:
     name: CodeQL Security Scan
-    runs-on: ubuntu-latest
-    - uses: actions/cache@v5    
+    runs-on: ubuntu-latest      
     permissions:
       actions: read
       contents: read
@@ -45,6 +44,7 @@ jobs:
         language: [ 'python' ]
     steps:
       steps:
+        uses: actions/cache@v5    
       - name: Checkout code
         uses: actions/checkout@v5.1.0
       - name: Initialize CodeQL
